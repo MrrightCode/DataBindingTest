@@ -34,5 +34,9 @@ public class MainActivity extends AppCompatActivity {
         public void intentToList(){
             startActivity(new Intent(MainActivity.this,ListActivity.class));
         }
+
+        public void intentToAttribute(){
+            startActivity(new Intent(MainActivity.this,CustomizeAttributeActivity.class));
+        }
     }
 }
