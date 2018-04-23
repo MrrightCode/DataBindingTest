@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.yangbin.databindingtest.Entity.ViewModel" />
+
+        <variable
+            name="presenter"
+            type="com.example.yangbin.databindingtest.Entity.Presenter"/>
+
+        <variable
+            name="onbuttonClick"
+            type="com.example.yangbin.databindingtest.MainActivity.onButtonClick"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.mTvTest1}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+             />
+
+        <Button
+            android:text="@{viewModel.mTvTest2}"
+            android:onClick="@{presenter.onClickCommond}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="改变String"
+            android:onClick="@{() -> onbuttonClick.buttonClick(viewModel)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="@string/listActivity"
+            android:onClick="@{() -> onbuttonClick.intentToList()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</layout>
+

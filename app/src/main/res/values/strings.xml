@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DataBindingTest</string>
+    <string name="listActivity">ListActivity</string>
+</resources>
